@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.special-menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 100vh;
+  padding: 20px;
+  position: relative; /* Ensure proper stacking context */
+  z-index: 1; /* Ensure it's above the background */
+}
+
+.special-menu-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../assets/watermark.jpeg'); /* Adjust image path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: blur(5px) brightness(70%);
+  z-index: -1; /* Ensure it's behind other content */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.export-packing-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.truck {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for readability */
+  width: 45%; /* Adjust width as needed */
+  max-width: 600px;
+  height: auto;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slideIn 2s ease-in-out;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.middle-image {
+  width: 80%;
+  max-width: 500px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.middle-image img {
+  width: 100%;
+  height: auto;
+}
+
+.packing-details {
+  background-color: var(--color-grey); /* Assuming --color-grey is defined elsewhere */
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  width: 100%;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.packing-details h2 {
+  margin-top: 0;
+  color: #333;
+  font-weight: 700;
+  font-size: 2em;
+}
+
+.packing-details ul {
+  list-style-type: none;
+  padding: 0;
+  color: #333;
+  font-weight: 400;
+  font-size: 1.2em;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.packing-details li {
+  margin: 15px 0;
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 10px;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: none; /* Disable default animation */
+}
+
+.packing-details li.fade-in {
+  animation: fadeInUp 7.5s forwards; /* Adjust animation duration as needed */
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.packing-details li:hover {
+  transform: scale(1.05);
+  background-color: #e0e0e0;
+}

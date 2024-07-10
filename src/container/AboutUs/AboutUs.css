@@ -1,0 +1,159 @@
+/* AboutUs.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.app__aboutus {
+  position: relative;
+}
+
+.app__aboutus-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.app__aboutus-overlay img {
+  width: 391px;
+  height: 415px;
+  z-index: 0;
+}
+
+.app__aboutus-content {
+  width: 100%;
+  z-index: 2;
+}
+
+.app__aboutus-content_about {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+  text-align: left;
+}
+
+.app__aboutus-content_knife {
+  margin: 2rem 4rem;
+}
+
+.app__aboutus-content_knife img {
+  height: 700px;
+}
+
+.app__aboutus-content_history {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  text-align: left;
+}
+
+.app__aboutus-content_about p,
+.app__aboutus-content_history p {
+  margin: 2rem 0;
+  color: var(--color-grey);
+}
+
+@media screen and (min-width: 2000px) {
+  .app__aboutus-content_knife img {
+    height: 1110px;
+  }
+
+  .app__aboutus-content_about p,
+  .app__aboutus-content_history p {
+    margin: 4rem 0;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .app__aboutus-content {
+    flex-direction: column;
+  }
+
+  .app__aboutus-content_knife {
+    margin: 4rem 0;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .app__aboutus-overlay img {
+    width: 80%;
+    height: 320px;
+  }
+}
+
+/* CSS for Plantation List */
+.p__opensans {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: color 0.3s ease-in-out;
+}
+
+.p__opensans span {
+  white-space: nowrap; /* Prevent line breaks */
+}
+
+.p__opensans:hover {
+  color: #ff6347; /* Change to your preferred color */
+}
+
+/* CSS for Cup Profile */
+.cup-profile {
+  font-weight: bold;
+  transition: transform 4.9s ease-in-out, opacity 0.3s ease-in-out;
+  animation: blinkAnimation 1s infinite alternate;
+}
+
+@keyframes blinkAnimation {
+  0%, 100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(-5px);
+  }
+}
+
+.cup-profile:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
+}
+
+/* Existing CSS */
+
+.text-bold {
+  font-weight: bold;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.text-bold:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
+}
+
+.custom__button {
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+.custom__button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.15);
+  transition: all 0.75s;
+  border-radius: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.custom__button:active::after {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
