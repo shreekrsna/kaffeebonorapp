@@ -1,7 +1,6 @@
 import React from 'react';
 import indiaimg from '../../assets/indiaimg.jpg';
-import SubHeading from '../SubHeading/SubHeading';
-import { logoanime } from '../../constants';
+
 import './Newsletter.css';
 
 const Newsletter = () => (

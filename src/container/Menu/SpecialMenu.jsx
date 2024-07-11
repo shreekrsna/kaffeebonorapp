@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react';
 import './SpecialMenu.css';
 import styles from '../../style';
 
-
 const SpecialMenu = () => {
   const packingDetailsRef1 = useRef(null);
   const packingDetailsRef2 = useRef(null);
@@ -20,19 +19,22 @@ const SpecialMenu = () => {
       });
     }, { threshold: 0.1 });
 
-    if (packingDetailsRef1.current) {
-      observer.observe(packingDetailsRef1.current);
+    const ref1Current = packingDetailsRef1.current;
+    const ref2Current = packingDetailsRef2.current;
+
+    if (ref1Current) {
+      observer.observe(ref1Current);
     }
-    if (packingDetailsRef2.current) {
-      observer.observe(packingDetailsRef2.current);
+    if (ref2Current) {
+      observer.observe(ref2Current);
     }
 
     return () => {
-      if (packingDetailsRef1.current) {
-        observer.unobserve(packingDetailsRef1.current);
+      if (ref1Current) {
+        observer.unobserve(ref1Current);
       }
-      if (packingDetailsRef2.current) {
-        observer.unobserve(packingDetailsRef2.current);
+      if (ref2Current) {
+        observer.unobserve(ref2Current);
       }
     };
   }, []);
@@ -45,7 +47,7 @@ const SpecialMenu = () => {
           "Experience reliable packaging solutions tailored to your needs with our meticulous handling of materials and comprehensive packaging options. From secure container lining to specialized jute and PP bagging, we ensure your goods are protected for safe transit and storage. Trust our expertise in delivering quality packaging that meets industry standards and safeguards your products throughout their journey."
         </p>
       </div>
-      <div className="export-packing-container ">
+      <div className="export-packing-container">
         <div className="truck truck-animate">
           <div className="packing-details" ref={packingDetailsRef1}>
             <h2>🚛 Export Packing Types</h2>
