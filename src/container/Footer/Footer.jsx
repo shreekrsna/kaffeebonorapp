@@ -12,13 +12,13 @@ const Footer = () => (
 
     <div className="app__footer-links">
       <div className="app__footer-links_contact">
-        <h1 className="app__footer-headtext">Contact Us</h1>
-        <p className='text-2xl text-bold '>Kaffeebonor LLP</p>
-        <div className='mx-[150px]'>   
-               <p className="p__opensans "> No 201, Raheja Point, <br/>Magrath Road, Ashoknagar,<br/> Bangaluru- 560025</p>
-        <p className="p__opensans mt-8 mx-2">+91 99808 50157 <br/> - Mr Moorthy Krishnan </p>
-        <p className="p__opensans mx-7">+91 91085 83007 <br/>- Mr Dayanand</p>
-        </div>
+        <h1 className="app__footer-headtext mr-[150px]">Contact Us</h1>
+        <p className='text-2xl text-bold mx-2 mt-5'>Kaffeebonor LLP</p>
+        
+               <p className="p__opensans mt-[-20px] "> No 201, Raheja Point, Magrath Road, Ashoknagar, Bangaluru- 560025</p>
+               <p className="p__opensans ">+91 99808 50157  <br/>- Mr Moorthy Krishnan </p>
+      
+       
 
       </div>
 

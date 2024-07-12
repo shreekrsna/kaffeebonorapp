@@ -1,105 +1,112 @@
 .app__footer {
-    width: 100%;
-    position: relative;
-    z-index: 1;
-
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-
-    background: var(--color-black);
-    padding-top: 0;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  background: var(--color-black);
+  padding-top: 1rem; /* Adjusted padding for better spacing */
+  padding-bottom: 1.5rem; /* Adjusted padding for better spacing */
 }
 
 .app__footer-links {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-
-    margin-top: 5rem;
-    padding: 0 2rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+  justify-content: center; /* Center items */
+  gap: 1rem; /* Added gap between items */
+  padding: 0 1rem; /* Adjusted padding */
 }
 
 .app__footer-links_contact,
 .app__footer-links_logo,
 .app__footer-links_work {
-    flex: 1;
-    margin: 1rem;
-    text-align: center;
+  flex: 1 1 100%; /* Allow items to grow and shrink, taking full width on small screens */
+  text-align: center;
+  margin-bottom: 1rem; /* Added margin between sections */
 }
 
 .app__footer-links_logo img:first-child {
-    width: 210px;
-    margin-bottom: 0.75rem;
-}
-
-
-.app__footer-links_work p:nth-child(2n + 1) {
-    margin-bottom: 1rem;
-}
-
-.app__footer-links_icons {
-    margin-top: 0.5rem;
-}
-
-.app__footer-links_icons svg {
-    color: var(--color-white);
-    margin: 0.5rem;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-.app__footer-links_icons svg:hover {
-    color: var(--color-golden);
+  width: 100%; /* Make logo image responsive */
+  max-width: 150px; /* Set max-width for larger screens */
 }
 
 .app__footer-headtext {
-    font-family: var(--font-base);
-    color: var(--color-white);
-    font-weight: 400;
-    letter-spacing: 0.04em;
-    text-transform: capitalize;
-    font-size: 32px;
-    line-height: 41.6px;
-    margin-bottom: 1rem;
+  font-family: var(--font-base);
+  color: var(--color-white);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 1rem; /* Adjusted margin */
+  text-align: center; /* Center align heading */
+}
+
+.app__footer-links_icons {
+  display: flex;
+  justify-content: center; /* Center align icons */
+  gap: 0.5rem; /* Added gap between icons */
+  margin-top: 1rem; /* Adjusted margin */
+}
+
+.app__footer-links_icons svg {
+  color: var(--color-white);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.app__footer-links_icons svg:hover {
+  color: var(--color-golden);
 }
 
 .footer__copyright {
-    margin-top: 3rem;
+  text-align: center; /* Center align copyright text */
+  margin-top: 2rem;
 }
 
-@media screen and (min-width: 2000px) {
-    .app__footer-headtext {
-        font-size: 51px;
-        line-height: 61.6px;
-    }
+.app__footer-links_contact p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 1rem; /* Adjusted margin */
+  max-width: 100%; /* Ensure text doesn't overflow on smaller screens */
+  text-align: center; /* Center align contact info */
 }
 
-@media screen and (max-width: 1150px) {
-    .app__footer-links {
-        align-items: center;
-        flex-direction: column;
-        padding: 0;
-    }
+@media screen and (min-width: 768px) {
+  .app__footer {
+    padding-top: 2rem; /* Adjusted padding for larger screens */
+    padding-bottom: 2rem; /* Adjusted padding for larger screens */
+  }
 
-    .app__footer-links_contact,
-    .app__footer-links_logo,
-    .app__footer-links_work {
-        margin: 2rem 0;
-        width: 100%;
-    }
-}
+  .app__footer-links {
+    justify-content: space-between; /* Space out items on larger screens */
+  }
 
-@media screen and (max-width: 650px) {
-    .app__footer {
-        padding: 0 0 2rem 0;
-    }
-}
+  .app__footer-links_contact,
+  .app__footer-links_logo,
+  .app__footer-links_work {
+    flex: 1; /* Equal width for sections on larger screens */
+    max-width: 33%; /* Limit width to fit three items per row */
+    text-align: left; /* Align text left for sections on larger screens */
+    margin-bottom: 0; /* Reset margin for consistent spacing */
+  }
 
-@media screen and (max-width: 350px) {
-    .app__footer-links_logo img:first-child {
-        width: 80%;
-    }
+  .app__footer-headtext {
+    font-size: 28px; /* Adjusted font size */
+    line-height: 36px; /* Adjusted line height */
+    text-align: left; /* Align heading left on larger screens */
+    margin-bottom: 1.5rem; /* Adjusted margin */
+  }
+
+  .app__footer-links_icons {
+    justify-content: flex-end; /* Align icons to the right on larger screens */
+    margin-top: 0; /* Reset margin for consistent spacing */
+  }
+
+  .app__footer-links_icons svg {
+    font-size: 24px; /* Adjusted icon size */
+  }
 }

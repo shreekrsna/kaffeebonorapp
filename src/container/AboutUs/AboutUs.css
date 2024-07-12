@@ -1,5 +1,3 @@
-/* AboutUs.css */
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 .app__aboutus {
@@ -12,82 +10,58 @@
 }
 
 .app__aboutus-overlay img {
-  width: 391px;
-  height: 415px;
+  width: 220px;
+  height: 240px;
   z-index: 0;
 }
 
 .app__aboutus-content {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
   z-index: 2;
 }
 
-.app__aboutus-content_about {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  flex-direction: column;
-  text-align: left;
-}
-
-.app__aboutus-content_knife {
-  margin: 2rem 4rem;
-}
-
-.app__aboutus-content_knife img {
-  height: 700px;
-}
-
+.app__aboutus-content_about,
 .app__aboutus-content_history {
   flex: 1;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
   flex-direction: column;
   text-align: left;
+  margin: 0 20px; /* Ensure equal spacing on both sides */
+}
+
+.app__aboutus-content_about h1,
+.app__aboutus-content_history h1 {
+  font-size: 2.5rem; /* Reduced font size */
 }
 
 .app__aboutus-content_about p,
 .app__aboutus-content_history p {
-  margin: 2rem 0;
+  margin: 1rem 0;
   color: var(--color-grey);
+  font-size: 1rem; /* Reduced font size */
 }
 
-@media screen and (min-width: 2000px) {
-  .app__aboutus-content_knife img {
-    height: 1110px;
-  }
-
-  .app__aboutus-content_about p,
-  .app__aboutus-content_history p {
-    margin: 4rem 0;
-  }
+.app__aboutus-content_knife {
+  flex: 0.5; /* Adjusted to be smaller and fit better */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px; /* Ensure equal spacing on both sides */
 }
 
-@media screen and (max-width: 900px) {
-  .app__aboutus-content {
-    flex-direction: column;
-  }
-
-  .app__aboutus-content_knife {
-    margin: 4rem 0;
-  }
+.app__aboutus-content_knife img {
+  height: 450px;
+   /* Reduced image size */
 }
 
-@media screen and (max-width: 650px) {
-  .app__aboutus-overlay img {
-    width: 80%;
-    height: 320px;
-  }
-}
-
-/* CSS for Plantation List */
 .p__opensans {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   transition: color 0.3s ease-in-out;
+  font-size: 0.875rem; /* Reduced font size */
 }
 
 .p__opensans span {
@@ -98,11 +72,11 @@
   color: #ff6347; /* Change to your preferred color */
 }
 
-/* CSS for Cup Profile */
 .cup-profile {
   font-weight: bold;
   transition: transform 4.9s ease-in-out, opacity 0.3s ease-in-out;
   animation: blinkAnimation 1s infinite alternate;
+  font-size:  2rem; /* Reduced font size */
 }
 
 @keyframes blinkAnimation {
@@ -121,22 +95,11 @@
   opacity: 0.8;
 }
 
-/* Existing CSS */
-
-.text-bold {
-  font-weight: bold;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-}
-
-.text-bold:hover {
-  transform: scale(1.05);
-  opacity: 0.8;
-}
-
 .custom__button {
   position: relative;
   overflow: hidden;
   transition: background-color 0.3s ease;
+  font-size: 0.875rem; /* Reduced font size */
 }
 
 .custom__button::after {
@@ -144,8 +107,8 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 300%;
-  height: 300%;
+  width: 150%;
+  height: 150%;
   background: rgba(255, 255, 255, 0.15);
   transition: all 0.75s;
   border-radius: 50%;
@@ -156,4 +119,21 @@
 .custom__button:active::after {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
+}
+
+@media screen and (max-width: 900px) {
+  .app__aboutus-content {
+    flex-direction: column;
+  }
+
+  .app__aboutus-content_knife {
+    margin: 2rem 0;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .app__aboutus-overlay img {
+    width: 50%;
+    height: 200px;
+  }
 }

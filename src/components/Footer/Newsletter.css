@@ -1,5 +1,5 @@
 .app__newsletter {
-    padding: 2rem 4rem;
+    padding: 1.5rem 2rem; /* Reduced padding */
     border: 1px solid var(--color-golden);
     background: var(--color-black);
 }
@@ -10,19 +10,18 @@
 
 .app__newsletter-input {
     flex-direction: row;
-    margin-top: 3rem;
+    margin-top: 0rem; /* Reduced margin */
 }
 
 .app__newsletter-input input {
-    width: 620px;
+    width: 480px; /* Reduced width */
     border: 1px solid var(--color-golden);
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 0.9rem; /* Reduced font-size */
     font-family: var(--font-base);
     color: var(--color-white);
-    
-    margin-right: 2rem;
-    padding: 0.75rem 1rem;
+    margin-right: 1rem; /* Reduced margin */
+    padding: 0.5rem 0.75rem; /* Reduced padding */
     background: var(--color-black);
 }
 
@@ -32,7 +31,7 @@
 
 @media screen and (min-width: 2000px) {
     .app__newsletter-input input {
-        font-size: 2rem;
+        font-size: 1.5rem; /* Reduced font-size */
     }
 }
 
@@ -40,24 +39,26 @@
     .app__newsletter-input {
         flex-direction: column;
         width: 100%;
+        padding: 2rem;
     }
 
     .app__newsletter-input input {
-        margin: 0 0 2rem 0;
+        margin: 0 0 0.5rem 0; /* Reduced margin */
         width: 100%;
+       
     }
 }
 
 @media screen and (max-width: 650px) {
     .app__newsletter {
-        padding: 2rem 0;
+        padding: 1.5rem 0; /* Reduced padding */
         border: none;
     }
 }
 
 @media screen and (max-width: 300px) {
     .app__newsletter-heading h1 {
-        font-size: 32px;
-        line-height: 50px;
+        font-size: 28px; /* Reduced font-size */
+        line-height: 40px; /* Reduced line-height */
     }
 }

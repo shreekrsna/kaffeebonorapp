@@ -17,7 +17,7 @@ const Newsletter = () => (
       </div>
     </div>
     <div className="app__newsletter-image justify-center items-center mx-[200px] mt-3">
-      <img src={indiaimg} alt="India" width={400} />
+      <img src={indiaimg} alt="India" />
    
     </div>
   </div>
