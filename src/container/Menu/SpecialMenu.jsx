@@ -69,7 +69,7 @@ const SpecialMenu = () => {
               <li>50Kg Jute bag with Eco Tact or Grain Pro Packing</li>
               <li>50Kg PP packing</li>
             </ul>
-          </div>
+          </div> 
         </div>
       </div>
     </div>

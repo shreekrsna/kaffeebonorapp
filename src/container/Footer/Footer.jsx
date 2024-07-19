@@ -10,13 +10,14 @@ const Footer = () => (
     <FooterOverlay />
     <Newsletter />
 
-    <div className="app__footer-links">
-      <div className="app__footer-links_contact">
-        <h1 className="app__footer-headtext mr-[150px]">Contact Us</h1>
-        <p className='text-2xl text-bold mx-2 mt-5'>Kaffeebonor LLP</p>
+    <div className="app__footer-links mt-4 ">
+      <div className="app__footer-links_contact mx-6">
+        <h1 className="app__footer-headtext mr-[150px] mx-[94px]">Contact Us</h1>
+        <p className='text-2xl text-bold'>Kaffeebonor LLP</p>
         
                <p className="p__opensans mt-[-20px] "> No 201, Raheja Point, Magrath Road, Ashoknagar, Bangaluru- 560025</p>
-               <p className="p__opensans ">+91 99808 50157  <br/>- Mr Moorthy Krishnan </p>
+               <p className="p__opensans mx-[80px]">+91 99808 50157  <br/>- Mr Moorthy Krishnan </p>
+               <p className=' my-[10px] mx-[80px]'> Email: coffee@kaffeebonor.com</p>
       
        
 
@@ -34,9 +35,11 @@ const Footer = () => (
         </div>
       </div>
 
-      <div className="app__footer-links_work">
+      <div className="app__footer-links_work mx-[20px]">
         <h1 className="app__footer-headtext">Working Hours</h1>
-        <p className="p__opensans mx-[200px]">Monday-Friday</p>
+        <p className="p__opensans ">Monday-Friday</p>
+        <p className="p__opensans mt-5">GSTIN: 29ABCFK2992E1Z5</p>
+
        
       
       </div>
